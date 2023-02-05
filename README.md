@@ -12,13 +12,13 @@ The app can be hosted for free on platforms such as [Vercel](https://vercel.com/
 
 ### Privacy Policy
 
-This app does not collect or send back any information related to Google Drive or Google User accounts. All data required to access the Google Drive API, such as Oauth access and refresh tokens, are stored in your browser's local storage.
+This app does not collect or send back any information related to Google Drive or Google User accounts. All data required to access the Google Drive API, such as Oauth access and refresh tokens, are stored in the browser's local storage.
 
 ### Special Credits
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Installation / Getting Started
+## INSTALLATION
 
 First, download the contents of this repository into your local environment for testing and run the following inside the terminal
 
@@ -70,19 +70,19 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 If all is well you should see your app in motion! 
 
-## Deployment on Vercel
+## DEPLOYMENT
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
-## About GBTI Labs
+## ABOUT GBTI LABS
 
 Thanks for being a part of the GBTI developer community! 
 
 GBTI Labs is a paid membership community that provides exclusive access to an expanding collection of innovative and novel open source assets. Our community is dedicated to promoting collaboration and shared learning through a private Discord network. We encourage members to contribute to the improvement of shared assets and knowledgebases. 
 
-#### Support Disclaimer
+## SUPPORT DISCLAIMER
 
 The purchase of access to this and other GBTI Labs private repositories only grants access to the code and communities, not to support services.
 
@@ -102,11 +102,11 @@ Per the current subscription model, subscriptions include access to the GBTI com
 
 The first verson of this asset has been produced.
 
-### progress
+### Progress
 * File search is limited to 2 levels
 * Starting directory/folder must be hosted within a shared Team folder. 
 
-## plans
+### Plans
 * Write in settings for supporting non team folders
 * investigate deep(er) nested searches. 
 
