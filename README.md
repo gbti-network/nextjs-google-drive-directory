@@ -1,8 +1,8 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
 # GBTI Labs
 
-GBTI.io is a paid membership community that grants private repository access and limited support to its members. 
+GBTI Labs is a paid membership community that provides exclusive access to an expanding collection of innovative and novel open source assets. Our community is dedicated to promoting collaboration and shared learning through a private Discord network. We encourage members to contribute to the improvement of shared assets and knowledgebases. 
+
+Thanks for being a part of the GBTI developer community! 
 
 ## Support Disclaimer
 
@@ -12,9 +12,25 @@ For support related inquiries, please refer to the GBTI Discord community where 
 
 We do not provide refunds. Once a user has access to the code base, they will remain in access during the duration of their subscription. That includes access to the GBTI community, supplimental GBTI assets, and all updates to this and other GBTI assets.
 
-## Asset Disclaimer
+# NextJs Google Drive Directory
 
-As of Feb 4, 2023, this app cannot search deeper than 2 levels inside the target folder. The asset also requires that the target folder be inside a shared Team folder. 
+## Introduction 
+
+This NextJS/React app provides a way to access and organize process documents through a directory portal that is linked to a single Google Drive folder. The directory portal is navigable and searchable, allowing users to quickly find the information they need.
+
+The app eliminates the need to search through unrelated Google Drive directories and shared folders, reducing clutter in search results. By hosting process documents within Google Drive, teams can avoid the use of third-party knowledge management systems and keep their information centralized.
+
+Our app offers a straightforward solution for managing process documents, making it easier to find and access the information that teams need. In addition, the app can be hosted for free on platforms such as [Vercel](https://vercel.com/new) and is secured through a secure Google Simple Sign-on process. 
+
+Once launched, users can access the single-page application with ease, knowing that their information is protected.
+
+# Privacy Policy
+
+This app does not collect or send back any information related to Google Drive or Google User accounts. All data required to access the Google Drive API, such as Oauth access and refresh tokens, are stored in your browser's local storage.
+
+## Special Credits
+
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
 
