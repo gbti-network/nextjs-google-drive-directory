@@ -8,9 +8,9 @@ const handleRedirect = async (code) => {
     try {
         const response = await axios.post('https://oauth2.googleapis.com/token', {
             code: code,
-            client_id: config.client_id,
-            client_secret: config.client_secret,
-            redirect_uri: config.redirect_uri,
+            client_id: config.api.client_id,
+            client_secret: config.api.client_secret,
+            redirect_uri: config.api.redirect_uri,
             grant_type: 'authorization_code',
         });
 
@@ -20,7 +20,6 @@ const handleRedirect = async (code) => {
         const accessToken = response.data.access_token;
         const refreshToken = response.data.refresh_token;
 
-        localStorage.setItem('config', config);
         localStorage.setItem('code', code);
         localStorage.setItem('access_token', accessToken);
         localStorage.setItem('refresh_token', refreshToken);
