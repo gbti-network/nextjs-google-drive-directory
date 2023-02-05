@@ -2,11 +2,9 @@
 
 ## INTRODUCTION
 
-This NextJS/React app provides a way to access the contents of a Google Drive directory through a single page application. Once a target folder is supplied, it creates categories from subfolders that can be navigated and searched.  
+This is a NextJS React app that provides users a way to access contents of a Google Drive directory through a single page application.
 
 This novel app eliminates the need for users to search through unrelated Google Drive directories, files, and shared folders, reducing clutter in search results. 
-
-The app offers a straightforward solution for managing process documents, making it easier to find and access the information that teams need without having to shift through unrelated content. 
 
 The app can be hosted for free on platforms such as [Vercel](https://vercel.com/new) and is secured through a secure Google Simple Sign-on process. 
 
