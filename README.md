@@ -56,8 +56,9 @@ At the time this readme is written, `config-example.json` looks something like t
 4. Go to the Credentials section, select "Create credentials" and choose "OAuth client ID"
 5. Choose "Web application" as the application type and fill out the required information.
 6. Note the Client ID and Client Secret values, you will need to replace `"GOOGLE CLIENT ID HERE"` and `"GOOGLE CLIENT SECRET HERE"` in the `config-example.json` file with your own Client ID and Client Secret.
-7. Add a Redirect URI, this is the URL where the user will be redirected after they grant/deny permission. This URL must point to the location where this app will be running and must end in `/login`. You will need to replace `"http://MYDOMAIN.COM/login"` in the `config-example.json` file with your own Redirect URI. This redirect URI will also need to be added into your Oauth client ID setup area in the `Authorized redirect URIs` section.
-8. In the `config-example.json` file, leave `"https://www.googleapis.com/auth/drive"` as the scope. For more information about scopes, you can find the available scopes at https://developers.google.com/identity/protocols/googlescopes
+7. Inside the Oauth Client ID edit area, inside the Credntials section of your Google Developer Console, You will need to add your `Authorized JavaScript origins` which for your local testing environment should be `http://localhost:3000` and for your production environment `http://MYDOMAIN.COM` (or the full base URL of your application)
+8. Also, inside the Oauth Client ID edit area, setup your `Authorized redirect URIs`.  These need to include full URLs to your apps login page that will look like `http://localhost:3000/login` for your localhost environment and  `http://MYDOMAIN.COM/login` for your production environment. 
+9. In the `config-example.json` file, leave `"https://www.googleapis.com/auth/drive.metadata.readonly"` as the scope. For more information about scopes, you can find the available scopes at https://developers.google.com/identity/protocols/googlescopes
 
 ### Setting up the Google Drive Directory
 The `directory` section in the `config-example.json` file requires two values to be set: the ID of the team drive and the ID of the starting folder location.
