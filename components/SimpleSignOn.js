@@ -5,7 +5,14 @@ var config = require('../config.json');
 const SimpleSignOn = ({ children }) => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [error, setError] = useState(null);
+  const [currentURL, setCurrentURL] = useState(null);
 
+  useEffect(() => {
+    if (!currentURL) {
+      setCurrentURL(window.location.href);
+    }
+  }, [currentURL]);
+ 
   useEffect(() => {
     const accessToken = localStorage.getItem('access_token');
     //console.log('accessToken ' + accessToken)
@@ -17,7 +24,7 @@ const SimpleSignOn = ({ children }) => {
   const handleSignOn = async () => {
     try {
       // Redirect the user to the Google authorization endpoint
-      window.location.href = 'https://accounts.google.com/o/oauth2/v2/auth?access_type=offline&prompt=consent&response_type=code&client_id='+config.api.client_id+'&redirect_uri='+config.api.redirect_uri+'&scope='+config.api.scopes;
+      window.location.href = 'https://accounts.google.com/o/oauth2/v2/auth?access_type=offline&prompt=consent&response_type=code&client_id='+config.api.client_id+'&redirect_uri='+ currentURL +'login&scope='+config.api.scopes;
     } catch (err) {
       setError(err);
     }
