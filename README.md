@@ -1,12 +1,14 @@
 # NextJs Google Drive Directory
 
-## Introduction 
+## Asset Introduction 
 
-This NextJS/React app provides a way to access and organize process documents through a directory portal that is linked to a single Google Drive folder. The directory portal is navigable and searchable, allowing users to quickly find the information they need.
+This NextJS/React app provides a way to access the contents of a Google Drive directory through a single page application. Once a target folder is supplied, it creates categories from subfolders that can be navigated and even searched.  
 
-The app eliminates the need to search through unrelated Google Drive directories and shared folders, reducing clutter in search results. By hosting process documents within Google Drive, teams can avoid the use of third-party knowledge management systems and keep their information centralized.
+This novel app eliminates the need for users to search through unrelated Google Drive directories, files, and shared folders, reducing clutter in search results. 
 
-Our app offers a straightforward solution for managing process documents, making it easier to find and access the information that teams need. In addition, the app can be hosted for free on platforms such as [Vercel](https://vercel.com/new) and is secured through a secure Google Simple Sign-on process. 
+Our app offers a straightforward solution for managing process documents, making it easier to find and access the information that teams need without having to shift through unrelated content. 
+
+In addition, this app can be hosted for free on platforms such as [Vercel](https://vercel.com/new) and is secured through a secure Google Simple Sign-on process. Users without the correct access permissions will not be able to make use of this customized content portal.
 
 Once launched, users can access the single-page application with ease, knowing that their information is protected.
 
@@ -76,13 +78,13 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
-# About GBTI Labs
+### About GBTI Labs
 
 Thanks for being a part of the GBTI developer community! 
 
 GBTI Labs is a paid membership community that provides exclusive access to an expanding collection of innovative and novel open source assets. Our community is dedicated to promoting collaboration and shared learning through a private Discord network. We encourage members to contribute to the improvement of shared assets and knowledgebases. 
 
-## GBTI Labs Support Disclaimer
+### Support Disclaimer
 
 The purchase of access to this and other GBTI Labs private repositories only grants access to the code and communities, not to support services.
 
