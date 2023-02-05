@@ -1,6 +1,6 @@
 # NextJs Google Drive Directory
 
-## Asset Introduction 
+## INTRODUCTION
 
 This NextJS/React app provides a way to access the contents of a Google Drive directory through a single page application. Once a target folder is supplied, it creates categories from subfolders that can be navigated and searched.  
 
