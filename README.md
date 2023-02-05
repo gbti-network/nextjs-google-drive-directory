@@ -8,14 +8,6 @@ This novel app eliminates the need for users to search through unrelated Google 
 
 The app can be hosted for free on platforms such as [Vercel](https://vercel.com/new) and is secured through a secure Google Simple Sign-on process. 
 
-### Privacy Policy
-
-This app does not collect or send back any information related to Google Drive or Google User accounts. All data required to access the Google Drive API, such as Oauth access and refresh tokens, are stored in the browser's local storage.
-
-### Special Credits
-
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
 ## INSTALLATION
 
 First, download the contents of this repository into your local environment for testing and run the following inside the terminal
