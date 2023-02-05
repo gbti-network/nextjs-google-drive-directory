@@ -22,6 +22,33 @@ Next, lets create the config.json file that will power the application.
 
 The `config-example.json` file contains the necessary configuration details to connect to the Google Drive API. To set up the connection, you will need to replace the placeholder values in the JSON file with your own Google Drive API credentials and settings.
 
+At the time this readme is written, `config-example.json` looks something like this:
+
+```
+{
+    "api" : {
+        "api_key" : "GOOGLE API KEY HERE",
+        "client_id" : "GOOGLE CLIENT ID HERE",
+        "client_secret" : "GOOGLE CLIENT SECRET HERE",
+        "redirect_uri" : "http://MYDOMIAN.COM/login",
+        "scopes" : "https://www.googleapis.com/auth/drive"
+    },
+    "directory" : {    
+        "team_drive" : "TEAM DRIVE ID HERE",
+        "target_folder" : "PARENT FOLDER ID HERE"
+    },
+    "components" : {
+        "HeaderImage" : {
+            "homepage_url" : "http://MYDOMAIN.COM",
+            "logo_url" : "https://LINKTOLOGO.png",
+            "logo_alt" : "MY CUSTOM GOOGLE DRIVE DIRECTORY",
+            "logo_width" : "300px",
+            "logo_color" : "#5b777d"
+        }
+    }
+}
+```
+
 ### Setting up the Google Drive API 
 1. Go to the Google Developers Console at https://console.developers.google.com/
 2. Create a new project or select an existing one
