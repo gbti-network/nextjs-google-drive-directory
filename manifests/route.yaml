@@ -1,0 +1,14 @@
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: hello-world-nextjs-route
+  labels:
+    app: hello-world-nextjs
+spec:
+  to:
+    kind: Service
+    name: hello-world-nextjs-svc
+    weight: 100
+  port:
+    targetPort: 3000-tcp
+  wildcardPolicy: None

@@ -1,0 +1,17 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: hello-world-nextjs-svc
+  labels:
+    app: hello-world-nextjs
+spec:
+  ports:
+    - name: 3000-tcp
+      protocol: TCP
+      port: 3000
+      targetPort: 3000
+  selector:
+    app: hello-world-nextjs
+    deploymentconfig: hello-world-nextjs
+  type: ClusterIP
+
