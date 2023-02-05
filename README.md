@@ -29,7 +29,7 @@ The `config-example.json` file contains the necessary configuration details to c
 4. Go to the Credentials section, select "Create credentials" and choose "OAuth client ID"
 5. Choose "Web application" as the application type and fill out the required information.
 6. Note the Client ID and Client Secret values, you will need to replace `"GOOGLE CLIENT ID HERE"` and `"GOOGLE CLIENT SECRET HERE"` in the `config-example.json` file with your own Client ID and Client Secret.
-7. Add a Redirect URI, this is the URL where the user will be redirected after they grant/deny permission. This URL must point to the location where this app will be running and must end in `/login`. You will need to replace `"http://MYDOMAIN.COM/login"` in the `config-example.json` file with your own Redirect URI.
+7. Add a Redirect URI, this is the URL where the user will be redirected after they grant/deny permission. This URL must point to the location where this app will be running and must end in `/login`. You will need to replace `"http://MYDOMAIN.COM/login"` in the `config-example.json` file with your own Redirect URI. This redirect URI will also need to be added into your Oauth client ID setup area in the `Authorized redirect URIs` section.
 8. In the `config-example.json` file, leave `"https://www.googleapis.com/auth/drive"` as the scope. For more information about scopes, you can find the available scopes at https://developers.google.com/identity/protocols/googlescopes
 
 ### Setting up the Google Drive Directory
@@ -47,6 +47,33 @@ The `components` section in the `config-example.json` file contains cosmetic det
 
 ### Final Step
 Once you have replaced all the placeholder values in the `config-example.json` file with your own values, you can remove `-example` from the filename to enable the configuration file.
+
+Once you are done your `config.json` file should look something like this: 
+
+```config.json
+{
+    "api" : {
+        "api_key" : "AIzaSyDEsyMKrmCJHb8v_NHyJv_wMDhfgUfgsu",
+        "client_id" : "590454986992-o6uaho5dtgtgyhdss7nqccrr6e.apps.googleusercontent.com",
+        "client_secret" : "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",
+        "redirect_uri" : "http://localhost:3000/login",
+        "scopes" : "https://www.googleapis.com/auth/drive"
+    },
+    "directory" : {    
+        "team_drive" : "0AIDUUK1SmUbSPdU7EA",
+        "target_folder" : "1ePFd-ssH4ja1-7_x6tNgd-5CT9HbsAIb"
+    },
+    "components" : {
+        "HeaderImage" : {
+            "homepage_url" : "http://localhost:3000/",
+            "logo_url" : "https://logovtor.com/wp-content/uploads/2021/06/some-logo-vector.png",
+            "logo_alt" : "My Logo",
+            "logo_width" : "300px",
+            "logo_color" : "#5b777d"
+        }
+    }
+}
+```
 
 ### Launch the dev server
 
