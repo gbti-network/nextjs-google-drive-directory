@@ -14,9 +14,6 @@ const SearchGoogleDrive = () => {
 
   const handleClickOutside = event => {
 
-    console.log('event.target.className')
-    console.log(event.target.className)
-    console.log(typeof event.target.className.includes)
     if (!event.target.className || typeof event.target.className.includes != 'function') {
       return;
     }
