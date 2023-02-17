@@ -30,8 +30,7 @@ At the time this readme is written, `config-example.json` looks something like t
         "api_key" : "GOOGLE API KEY HERE",
         "client_id" : "GOOGLE CLIENT ID HERE",
         "client_secret" : "GOOGLE CLIENT SECRET HERE",
-        "redirect_uri" : "http://MYDOMIAN.COM/login",
-        "scopes" : "https://www.googleapis.com/auth/drive"
+        "scopes" : "https://www.googleapis.com/auth/drive.metadata.readonly"
     },
     "directory" : {    
         "team_drive" : "TEAM DRIVE ID HERE",
@@ -84,8 +83,7 @@ Once you are done your `config.json` file should look something like this:
         "api_key" : "AIzaSyDEsyMKrmCJHb8v_NHyJv_wMDhfgUfgsu",
         "client_id" : "590454986992-o6uaho5dtgtgyhdss7nqccrr6e.apps.googleusercontent.com",
         "client_secret" : "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",
-        "redirect_uri" : "http://localhost:3000/login",
-        "scopes" : "https://www.googleapis.com/auth/drive"
+        "scopes" : "https://www.googleapis.com/auth/drive.metadata.readonly"
     },
     "directory" : {    
         "team_drive" : "0AIDUUK1SmUbSPdU7EA",
