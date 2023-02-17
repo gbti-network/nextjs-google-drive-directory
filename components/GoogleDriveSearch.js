@@ -67,7 +67,7 @@ const SearchGoogleDrive = () => {
         headers: { Authorization: `Bearer ${accessToken}` },
         params: {
           source: "GoogleDriveSource",
-          corpora: "teamDrive",
+          corpora: corpora,
           includeTeamDriveItems: true,
           supportsAllDrives: true,
           teamDriveId: teamDriveId,
