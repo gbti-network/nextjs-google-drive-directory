@@ -34,3 +34,4 @@ yarn-error.log*
 .vercel
 config.json
 .idea/
+package-lock.json
