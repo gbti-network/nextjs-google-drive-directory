@@ -11,6 +11,7 @@ const SearchGoogleDrive = () => {
   const [results, setResults] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+  const corpora = (teamDriveId) ? "teamDrive" : "allDrives";
 
   const handleClickOutside = event => {
 
@@ -49,7 +50,7 @@ const SearchGoogleDrive = () => {
         headers: { Authorization: `Bearer ${accessToken}` },
         params: {
           source: "GoogleDriveSource",
-          corpora: "teamDrive",
+          corpora: corpora,
           includeTeamDriveItems: true,
           supportsAllDrives: true,
           teamDriveId: teamDriveId,
@@ -109,11 +110,11 @@ const SearchGoogleDrive = () => {
       {error && <div>{error.message}</div>}
       <ul style={{ width: "100%" , textAlign : "left" }}  className={styles.searchContainer}>
         {(results || []).map(result => (
-          <a href={`https://docs.google.com/document/d/${result.id}/edit`} target="_blank" rel="noopener noreferrer" className={styles.searchResultLink}>
           <li key={result.id} className={styles.searchResult}>
-              {result.name}   
+            <a href={`https://docs.google.com/document/d/${result.id}/edit`} target="_blank" rel="noopener noreferrer" className={styles.searchResultLink}>
+              {result.name} 
+            </a>  
           </li>
-          </a>
           ))}
       </ul>
     </div>

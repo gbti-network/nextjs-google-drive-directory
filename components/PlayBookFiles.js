@@ -12,6 +12,7 @@ const PlayBookFiles = () => {
   const [results, setResults] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+  const corpora = (teamDriveId) ? "teamDrive" : "allDrives";
 
   useEffect(() => {
 
@@ -27,7 +28,7 @@ const PlayBookFiles = () => {
           headers: { Authorization: `Bearer ${accessToken}` },
           params: {
             source : "PlayBookFiles",
-            corpora: "teamDrive",
+            corpora: corpora,
             includeTeamDriveItems: true,
             supportsAllDrives: true,
             teamDriveId: teamDriveId,

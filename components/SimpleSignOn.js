@@ -15,7 +15,7 @@ const SimpleSignOn = ({ children }) => {
  
   useEffect(() => {
     const accessToken = localStorage.getItem('access_token');
-    //console.log('accessToken ' + accessToken)
+
     if (accessToken) {
       setIsAuthenticated(true);
     }

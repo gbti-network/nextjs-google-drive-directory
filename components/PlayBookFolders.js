@@ -10,6 +10,7 @@ const PlayBookFolders = () => {
   const router = useRouter();
   const targetFolderId  = (typeof router.query.fid != 'undefined' ) ? router.query.fid : config.directory.target_folder;
   const teamDriveId = config.directory.team_drive;
+  const corpora = (teamDriveId) ? "teamDrive" : "allDrives";
   const [results, setResults] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
@@ -29,7 +30,7 @@ const PlayBookFolders = () => {
           headers: { Authorization: `Bearer ${accessToken}` },
           params: {
             source : "PlayBookFolders",
-            corpora: "teamDrive",
+            corpora: corpora,
             includeTeamDriveItems: true,
             supportsAllDrives: true,
             teamDriveId: teamDriveId,

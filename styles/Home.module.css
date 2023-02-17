@@ -125,6 +125,13 @@
   }
 }
 
+.headerContainer {
+  display: 'flex';
+  justify-content: 'center'; 
+  align-items: 'center';
+  margin-bottom:20px;
+}
+
 .searchInput {
    width: 44vw; 
    text-align: left; 
@@ -163,6 +170,7 @@
 
 .searchResultLink {
   cursor: pointer;
+  display:block;
 }
 
 .FolderHeader {
