@@ -62,10 +62,10 @@ At the time this readme is written, `config-example.json` looks something like t
 
 ### Setting up the Google Drive Directory
 The `directory` section in the `config-example.json` file requires two values to be set: the ID of the team drive and the ID of the starting folder location.
-1. Go to the Google Drive web interface and locate the team drive you want to use. If your process documents are not in a team drive, skip to step 4.
+1. If the directory will be located inside a team drive, then go to the Google Drive web interface and locate the team drive you want to use. 
 2. Click on the three dots (...) in the top right corner of the drive and choose "Drive settings".
-3. Copy the Drive ID, you will need to replace `"TEAM DRIVE ID HERE"` in the `config-example.json` file with your own team drive ID.
-4. Locate the folder you want to use as the starting folder location.
+3. Copy the Drive ID, you will need to replace `"TEAM DRIVE ID HERE"` in the `config-example.json` file with your own team drive ID. **If you are not using a team drive, then make sure this value is left empty**. 
+4. Locate the folder you want to use as the starting folder location for your directory.
 5. Click on the three dots (...) next to the folder and choose "Get link".
 6. In the "Link to share" dialog, select "Copy link".
 7. Extract the folder ID from the copied link, you will need to replace `"PARENT FOLDER ID HERE"` in the `config-example.json` file with your own folder ID.
