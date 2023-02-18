@@ -139,6 +139,11 @@ GBTI Labs does not provide refunds after onboarding. Once a user has access to t
 
 Per the current subscription model, subscriptions include access to the GBTI community as well as access GBTI private repositories as long as the subscription is active. 
 
+# Support Videos
+
+* [Introduction - NextJS Google Drive Directory](https://www.youtube.com/watch?v=t_pQ1xy7cTo)
+* [Installation Tutorial - Localhost - NextJS Google Drive Directory](https://www.youtube.com/watch?v=Fsatd2HkBxk)
+
 # Release Notes
 
 ## Feb 4, 2023
