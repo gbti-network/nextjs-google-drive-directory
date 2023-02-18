@@ -4,8 +4,7 @@
         "api_key" : "GOOGLE API KEY HERE",
         "client_id" : "GOOGLE CLIENT ID HERE",
         "client_secret" : "GOOGLE CLIENT SECRET HERE",
-        "redirect_uri" : "http://MYDOMIAN.COM/login",
-        "scopes" : "https://www.googleapis.com/auth/drive"
+        "scopes" : "https://www.googleapis.com/auth/drive.metadata.readonly"
     },
     "directory" : {    
         "team_drive" : "TEAM DRIVE ID HERE",
