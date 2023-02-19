@@ -3,7 +3,8 @@ import { useRouter } from 'next/dist/client/router';
 import axios from "axios";
 import config from "../config.json";
 import styles from '../styles/Home.module.css'
-import handleAccessTokenExpiration from "./HandleAccessTokenExpiration ";
+import handleAccessTokenExpiration from "./HandleAccessTokenExpiration";
+import handleGoogleDriveShortcutLink from "./HandleGoogleDriveShortcutLink";
 
 const PlayBookFiles = () => {
   const router = useRouter();
@@ -59,7 +60,7 @@ const PlayBookFiles = () => {
       <ul className={styles.list} style={{ width: "100%" , textAlign : "left" }}  className={styles.filesContainer}>
         {results.map((result) => (
           <li key={result.id}  className={styles.fileResult}>
-            <a href={`https://docs.google.com/document/d/${result.id}/edit`} target="_blank" rel="noopener noreferrer" style={{display:"block"}}>
+            <a href={`https://docs.google.com/document/d/${result.id}/edit`} data-file-id={result.id}  style={{display:"block"}} target="_blank" rel="noopener noreferrer" data-mime-type={result.mimeType} onClick={handleGoogleDriveShortcutLink}>
               {result.name}
             </a>
           </li>

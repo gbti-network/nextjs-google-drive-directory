@@ -1,7 +1,8 @@
 import React, { useState , useEffect, useRef} from "react";
 import axios from "axios";
 import config from "../config.json";
-import handleAccessTokenExpiration from "./HandleAccessTokenExpiration ";
+import handleAccessTokenExpiration from "./HandleAccessTokenExpiration";
+import handleGoogleDriveShortcutLink from "./HandleGoogleDriveShortcutLink";
 import styles from '../styles/Home.module.css'
 
 const SearchGoogleDrive = () => {
@@ -36,6 +37,8 @@ const SearchGoogleDrive = () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
+
+
 
   const searchFiles = async () => {
     setLoading(true);
@@ -111,9 +114,9 @@ const SearchGoogleDrive = () => {
       <ul style={{ width: "100%" , textAlign : "left" }}  className={styles.searchContainer}>
         {(results || []).map(result => (
           <li key={result.id} className={styles.searchResult}>
-            <a href={`https://docs.google.com/document/d/${result.id}/edit`} target="_blank" rel="noopener noreferrer" className={styles.searchResultLink}>
-              {result.name} 
-            </a>  
+            <a href={`https://docs.google.com/document/d/${result.id}/edit`} data-file-id={result.id} target="_blank" rel="noopener noreferrer" className={styles.searchResultLink} data-mime-type={result.mimeType} onClick={handleGoogleDriveShortcutLink}>
+              {result.name}
+            </a>
           </li>
           ))}
       </ul>
