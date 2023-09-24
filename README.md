@@ -123,6 +123,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 * [Introduction - NextJS Google Drive Directory](https://www.youtube.com/watch?v=t_pQ1xy7cTo)
 * [Installation Tutorial - Localhost - NextJS Google Drive Directory](https://www.youtube.com/watch?v=Fsatd2HkBxk)
+* [Installation Tutorial - Deploying to Vercel](https://www.youtube.com/watch?v=fy0WG4J9jPA)
 
 
 ## Support our work / Join the GBTI network!
