@@ -119,42 +119,16 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
-## ABOUT GBTI LABS
-
-Thanks for being a part of the GBTI developer community! 
-
-GBTI Labs is a paid membership community that provides exclusive access to an expanding collection of innovative and novel open source assets. Our community is dedicated to promoting collaboration and shared learning through a private Discord network. We encourage members to contribute to the improvement of shared assets and knowledgebases. 
-
-## SUPPORT DISCLAIMER
-
-The purchase of access to this and other GBTI Labs private repositories only grants access to the code and communities, not to support services.
-
-That being said, we hope that the community will provide light support services as required. Please refer to the GBTI Discord community where fellow users may be able to assist you with your inquires. 
-
-Please be aware that support is not guaranteed and requests for help may take up to 48 hours for a reply. 
-
-Depending on the complexity of your request, you may be recommended to a third-party support vendor with hourly rates ranging from 80-120USD.
-
-GBTI Labs does not provide refunds after onboarding. Once a user has access to the code base, they will remain in access during the duration of their subscription.
-
-Per the current subscription model, subscriptions include access to the GBTI community as well as access GBTI private repositories as long as the subscription is active. 
-
 # Support Videos
 
 * [Introduction - NextJS Google Drive Directory](https://www.youtube.com/watch?v=t_pQ1xy7cTo)
 * [Installation Tutorial - Localhost - NextJS Google Drive Directory](https://www.youtube.com/watch?v=Fsatd2HkBxk)
 
-# Release Notes
 
-## Feb 4, 2023
+## Support our work / Join the GBTI network!
 
-The first verson of this asset has been produced.
+Support the GBTI network by becoming a member of our private community.
 
-### Progress
-* File search is limited to 2 levels
-* Starting directory/folder must be hosted within a shared Team folder. 
+[Become a supporter and join the GBTI Community](https://gbti.io)
 
-### Plans
-* Write in settings for supporting non team folders
-* investigate deep(er) nested searches. 
 
