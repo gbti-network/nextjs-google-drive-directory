@@ -4,9 +4,9 @@
 
 This is a NextJS React app that provides users a way to access contents of a Google Drive directory through a single page application.
 
-This novel app eliminates the need for users to search through unrelated Google Drive directories, files, and shared folders, reducing clutter in search results. 
+This novel app eliminates the need for users to search through unrelated Google Drive directories, files, and shared folders, reducing clutter in search results.
 
-The app can be hosted for free on platforms such as [Vercel](https://vercel.com/new) and is secured through a secure Google Simple Sign-on process. 
+The app can be hosted for free on platforms such as [Vercel](https://vercel.com/new) and is secured through a secure Google Simple Sign-on process.
 
 ## INSTALLATION
 
@@ -16,7 +16,7 @@ First, download the contents of this repository into your local environment for 
 npm install
 ```
 
-Next, lets create the config.json file that will power the application. 
+Next, lets create the config.json file that will power the application.
 
 ## CONFIGURATION
 
@@ -48,26 +48,48 @@ At the time this readme is written, `config-example.json` looks something like t
 }
 ```
 
-### Setting up the Google Drive API 
-1. Go to the Google Developers Console at https://console.developers.google.com/
-2. Create a new project or select an existing one
-3. Go to the API Library, select Google Drive API and enable it for your project
-4. Go to the Credentials section, select "Create credentials" and choose "OAuth client ID"
-5. Choose "Web application" as the application type and fill out the required information.
-6. Note the Client ID and Client Secret values, you will need to replace `"GOOGLE CLIENT ID HERE"` and `"GOOGLE CLIENT SECRET HERE"` in the `config-example.json` file with your own Client ID and Client Secret.
-7. Inside the Oauth Client ID edit area, inside the Credntials section of your Google Developer Console, You will need to add your `Authorized JavaScript origins` which for your local testing environment should be `http://localhost:3000` and for your production environment `http://MYDOMAIN.COM` (or the full base URL of your application)
-8. Also, inside the Oauth Client ID edit area, setup your `Authorized redirect URIs`.  These need to include full URLs to your apps login page that will look like `http://localhost:3000/login` for your localhost environment and  `http://MYDOMAIN.COM/login` for your production environment. 
-9. In the `config-example.json` file, leave `"https://www.googleapis.com/auth/drive.metadata.readonly"` as the scope. For more information about scopes, you can find the available scopes at https://developers.google.com/identity/protocols/googlescopes
+### Setting up the Google Drive API
 
-### Setting up the Google Drive Directory
-The `directory` section in the `config-example.json` file requires two values to be set: the ID of the team drive and the ID of the starting folder location.
-1. If the directory will be located inside a team drive, then go to the Google Drive web interface and locate the team drive you want to use. 
-2. Click on the three dots (...) in the top right corner of the drive and choose "Drive settings".
-3. Copy the Drive ID, you will need to replace `"TEAM DRIVE ID HERE"` in the `config-example.json` file with your own team drive ID. **If you are not using a team drive, then make sure this value is left empty**. 
-4. Locate the folder you want to use as the starting folder location for your directory.
-5. Click on the three dots (...) next to the folder and choose "Get link".
-6. In the "Link to share" dialog, select "Copy link".
-7. Extract the folder ID from the copied link, you will need to replace `"PARENT FOLDER ID HERE"` in the `config-example.json` file with your own folder ID.
+1. **Access the Google Developers Console:**
+    - Navigate to the Google Developers Console at [https://console.developers.google.com/](https://console.developers.google.com/).
+
+2. **Create or Select a Project:**
+    - Create a new project or select an existing one from your project list.
+
+3. **Enable the Google Drive API:**
+    - Go to the API Library, search for "Google Drive API," and enable it for your project.
+
+4. **Create OAuth Credentials:**
+    - Go to the "Credentials" section.
+    - Click on "Create credentials" and choose "OAuth client ID."
+
+5. **Set Up OAuth Consent Screen:**
+    - Choose "Web application" as the application type.
+    - Fill out the required information for the OAuth consent screen.
+
+6. **Configure Authorized JavaScript Origins:**
+    - In the OAuth Client ID edit area within the Credentials section, add your `Authorized JavaScript origins`.
+        - For local testing, use: `http://localhost:3000`
+        - For production, use: `http://MYDOMAIN.COM` (replace with your actual domain).
+
+7. **Obtain Client ID and Client Secret:**
+    - After creating the OAuth client ID, note the Client ID and Client Secret values.
+    - Replace `"GOOGLE CLIENT ID HERE"` and `"GOOGLE CLIENT SECRET HERE"` in the `config-example.json` file with your own Client ID and Client Secret.
+
+8. **Set Up Authorized Redirect URIs:**
+    - In the same OAuth Client ID edit area, configure your `Authorized redirect URIs`.
+        - For local testing, use: `http://localhost:3000/login`
+        - For production, use: `http://MYDOMAIN.COM/login` (replace with your actual login URL).
+
+9. **Set Up Test Users (Since the App is Not Published):**
+    - Go to the "OAuth consent screen" section in the Google Developers Console.
+    - Scroll down to the "Test users" section.
+    - Click "Add users" and enter the email addresses of users who will be testing your app.
+    - These users will now be able to access your application using OAuth, even though the app is not published.
+
+10. **Update `config-example.json`:**
+    - In the `config-example.json` file, leave `"https://www.googleapis.com/auth/drive.metadata.readonly"` as the scope.
+    - For more information about scopes, refer to the available scopes at [Google Identity Protocols](https://developers.google.com/identity/protocols/googlescopes).
 
 ### Customizing the Components
 The `components` section in the `config-example.json` file contains cosmetic details that can be customized as desired. Replace the values in this section with your desired values.
@@ -75,7 +97,7 @@ The `components` section in the `config-example.json` file contains cosmetic det
 ### Final Step
 Once you have replaced all the placeholder values in the `config-example.json` file with your own values, you can remove `-example` from the filename to enable the configuration file.
 
-Once you are done your `config.json` file should look something like this: 
+Once you are done your `config.json` file should look something like this:
 
 ```config.json
 {
@@ -111,7 +133,7 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-If all is well you should see your app in motion! 
+If all is well you should see your app in motion!
 
 ## DEPLOYMENT
 

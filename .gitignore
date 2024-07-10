@@ -35,3 +35,6 @@ yarn-error.log*
 config.json
 .idea/
 package-lock.json
+snapshot.py
+snapshots/
+requirements.txt

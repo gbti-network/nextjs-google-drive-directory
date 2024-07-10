@@ -53,37 +53,37 @@ const PlayBookFolders = () => {
     getFiles();
   }, [targetFolderId]);
 
-
   return (
-    <div  style={{ width: "100%" , textAlign : "left" }}>
-      {loading && <div style={{display:"none"}}>Loading...</div>}
-      {error && <div>{error.message}</div>}
-      <div className={styles.grid}>
-        {results.map(result => (
-            <Link 
-              href={{
-                  pathname: `/list/[fid]`,
-                  query: {
-                    fid : result.id
-                  },
-              }}
-              as={`/list/${result.id}`}
-              key={result.id}
-            >
-              <a onClick={() => {
-                const container = document.querySelector('.searchContainer');
-                if (typeof container != 'undefined' && container ) {
-                    container.innerHTML = '';
-                }
-              }}>
-                <div className={styles.card}>
+      <div style={{ width: "100%", textAlign: "left" }}>
+        {loading && <div style={{ display: "none" }}>Loading...</div>}
+        {error && <div>{error.message}</div>}
+        <div className={styles.grid}>
+          {results.map(result => (
+              <Link
+                  href={{
+                    pathname: `/list/[fid]`,
+                    query: {
+                      fid: result.id
+                    },
+                  }}
+                  as={`/list/${result.id}`}
+                  key={result.id}
+              >
+                <div
+                    className={styles.card}
+                    onClick={() => {
+                      const container = document.querySelector('.searchContainer');
+                      if (container) {
+                        container.innerHTML = '';
+                      }
+                    }}
+                >
                   <h3>{result.name}</h3>
                 </div>
-              </a>
-            </Link>
-        ))}
+              </Link>
+          ))}
+        </div>
       </div>
-    </div>
   );
 };
 

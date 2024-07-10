@@ -2,21 +2,20 @@ import React, { useState, useEffect } from "react";
 import { useRouter } from 'next/dist/client/router';
 import axios from "axios";
 import config from "../config.json";
-import styles from '../styles/Home.module.css'
+import styles from '../styles/Home.module.css';
 import handleAccessTokenExpiration from "./HandleAccessTokenExpiration";
 import handleGoogleDriveShortcutLink from "./HandleGoogleDriveShortcutLink";
 
 const PlayBookFiles = () => {
   const router = useRouter();
-  const fid  = (typeof router.query.fid != 'undefined' ) ? router.query.fid : config.directory.target_folder;
+  const fid = typeof router.query.fid !== 'undefined' ? router.query.fid : config.directory.target_folder;
   const teamDriveId = config.directory.team_drive;
   const [results, setResults] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
-  const corpora = (teamDriveId) ? "teamDrive" : "allDrives";
+  const corpora = teamDriveId ? "teamDrive" : "allDrives";
 
   useEffect(() => {
-
     const getFiles = async () => {
       setLoading(true);
       setError(null);
@@ -28,7 +27,7 @@ const PlayBookFiles = () => {
         const res = await axios.get("https://www.googleapis.com/drive/v3/files", {
           headers: { Authorization: `Bearer ${accessToken}` },
           params: {
-            source : "PlayBookFiles",
+            source: "PlayBookFiles",
             corpora: corpora,
             includeTeamDriveItems: true,
             supportsAllDrives: true,
@@ -53,20 +52,29 @@ const PlayBookFiles = () => {
   }, [fid]);
 
   return (
-    (fid !== config.directory.target_folder) && 
-    <div style={{ width: "100%" , textAlign : "left" }}>
-      {loading && <div style={{display:"none"}}>Loading...</div>}
-      {error && <div>{error.message}</div>}
-      <ul className={styles.list} style={{ width: "100%" , textAlign : "left" }}  className={styles.filesContainer}>
-        {results.map((result) => (
-          <li key={result.id}  className={styles.fileResult}>
-            <a href={`https://docs.google.com/document/d/${result.id}/edit`} data-file-id={result.id}  style={{display:"block"}} target="_blank" rel="noopener noreferrer" data-mime-type={result.mimeType} onClick={handleGoogleDriveShortcutLink}>
-              {result.name}
-            </a>
-          </li>
-        ))}
-      </ul>
-    </div>
+      fid !== config.directory.target_folder && (
+          <div style={{ width: "100%", textAlign: "left" }}>
+            {loading && <div style={{ display: "none" }}>Loading...</div>}
+            {error && <div>{error.message}</div>}
+            <ul className={styles.filesContainer} style={{ width: "100%", textAlign: "left" }}>
+              {results.map(result => (
+                  <li key={result.id} className={styles.fileResult}>
+                    <a
+                        href={`https://docs.google.com/document/d/${result.id}/edit`}
+                        data-file-id={result.id}
+                        style={{ display: "block" }}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        data-mime-type={result.mimeType}
+                        onClick={handleGoogleDriveShortcutLink}
+                    >
+                      {result.name}
+                    </a>
+                  </li>
+              ))}
+            </ul>
+          </div>
+      )
   );
 };
 

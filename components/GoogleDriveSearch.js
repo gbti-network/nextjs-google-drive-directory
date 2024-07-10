@@ -21,11 +21,11 @@ const SearchGoogleDrive = () => {
     }
 
     if (
-      !event.target.className.includes(styles.searchContainer) 
-      && !event.target.className.includes(styles.searchInput)
-      && !event.target.className.includes(styles.searchResult)
-      && !event.target.className.includes(styles.searchResultLink)
-      ) {
+        !event.target.className.includes(styles.searchContainer)
+        && !event.target.className.includes(styles.searchInput)
+        && !event.target.className.includes(styles.searchResult)
+        && !event.target.className.includes(styles.searchResultLink)
+    ) {
       setResults([]);
     }
   };
@@ -97,30 +97,30 @@ const SearchGoogleDrive = () => {
   };
 
   return (
-    <div style={{ width: "100%" , textAlign : "left" }}>
-      <input
-        type="text"
-        value={query}
-        onChange={event => setQuery(event.target.value)}
-        onKeyPress={handleKeyPress}
-        className = { styles.searchInput }
-      />
-      <button 
-      onClick={searchFiles}
-      style={{ width: "6vw" , textAlign : "center" , paddingLeft : "12px" , paddingRight : "12px" , paddingTop : "10px" , paddingBottom : "12px" }}
-      >Search</button>
-      {loading && <div style={{display:"nonxe"}}>Loading...</div>}
-      {error && <div>{error.message}</div>}
-      <ul style={{ width: "100%" , textAlign : "left" }}  className={styles.searchContainer}>
-        {(results || []).map(result => (
-          <li key={result.id} className={styles.searchResult}>
-            <a href={`https://docs.google.com/document/d/${result.id}/edit`} data-file-id={result.id} target="_blank" rel="noopener noreferrer" className={styles.searchResultLink} data-mime-type={result.mimeType} onClick={handleGoogleDriveShortcutLink}>
-              {result.name}
-            </a>
-          </li>
+      <div style={{ width: "100%" , textAlign : "left" }}>
+        <input
+            type="text"
+            value={query}
+            onChange={event => setQuery(event.target.value)}
+            onKeyPress={handleKeyPress}
+            className = { styles.searchInput }
+        />
+        <button
+            onClick={searchFiles}
+            style={{ width: "6vw" , textAlign : "center" , paddingLeft : "12px" , paddingRight : "12px" , paddingTop : "10px" , paddingBottom : "12px" }}
+        >Search</button>
+        {loading && <div style={{display:"nonxe"}}>Loading...</div>}
+        {error && <div>{error.message}</div>}
+        <ul style={{ width: "100%" , textAlign : "left" }}  className={styles.searchContainer}>
+          {(results || []).map(result => (
+              <li key={result.id} className={styles.searchResult}>
+                <a href={`https://docs.google.com/document/d/${result.id}/edit`} data-file-id={result.id} target="_blank" rel="noopener noreferrer" className={styles.searchResultLink} data-mime-type={result.mimeType} onClick={handleGoogleDriveShortcutLink}>
+                  {result.name}
+                </a>
+              </li>
           ))}
-      </ul>
-    </div>
+        </ul>
+      </div>
   );
 };
 
