@@ -102,7 +102,6 @@ Once you are done your `config.json` file should look something like this:
 ```config.json
 {
     "api" : {
-        "api_key" : "AIzaSyDEsyMKrmCJHb8v_NHyJv_wMDhfgUfgsu",
         "client_id" : "590454986992-o6uaho5dtgtgyhdss7nqccrr6e.apps.googleusercontent.com",
         "client_secret" : "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",
         "scopes" : "https://www.googleapis.com/auth/drive.metadata.readonly"
