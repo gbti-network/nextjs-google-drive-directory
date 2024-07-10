@@ -152,6 +152,6 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 Support the GBTI network by becoming a member of our private community.
 
-[Join the GBTI Community](https://gbti.io)
+[Become a supporter and join the GBTI Community](https://gbti.io)
 
 
