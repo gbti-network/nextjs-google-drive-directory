@@ -27,7 +27,6 @@ At the time this readme is written, `config-example.json` looks something like t
 ```
 {
     "api" : {
-        "api_key" : "GOOGLE API KEY HERE",
         "client_id" : "GOOGLE CLIENT ID HERE",
         "client_secret" : "GOOGLE CLIENT SECRET HERE",
         "scopes" : "https://www.googleapis.com/auth/drive.metadata.readonly"
